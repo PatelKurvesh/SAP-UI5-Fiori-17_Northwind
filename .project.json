@@ -13,6 +13,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Sat, 04 Mar 2023 18:10:46 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Sat, 04 Mar 2023 19:25:31 GMT"
     }
   ],
   "translation": {
@@ -40,5 +45,12 @@
     "targetFolder": "dist",
     "excludedFolders": [],
     "excludedFiles": []
+  },
+  "mockpreview": {
+    "mockUri": "/northwind/v2/northwind/northwind.svc",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }

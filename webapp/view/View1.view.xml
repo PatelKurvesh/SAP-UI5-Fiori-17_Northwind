@@ -1,9 +1,38 @@
 <mvc:View controllerName="GithubSAP-UI5-Fiori-17_Northwind.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<form:Simpleform>
+						<form:content>
+							<Label text="CustomerID"></Label>
+							<Input></Input>
+							
+							<Label text="Name"></Label>
+							<Input></Input>
+							
+						</form:content>
+					</form:Simpleform>
+					
+					<Table items="{/Customers}">
+						<columns>
+							<Column>
+								<Text text="CustomerID"></Text>
+							</Column>
+							<Column>
+								<Text text="Name"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListitem>
+								<cells>
+									<Text text="{CustomerID}"></Text>
+								</cells>
+							</ColumnListitem>
+						</items>
+					</Table>
+				</content>
 			</Page>
 		</pages>
 	</App>
