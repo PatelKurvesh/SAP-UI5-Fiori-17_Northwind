@@ -17,7 +17,7 @@
     {
       "templateId": "servicecatalog.connectivityComponent",
       "templateVersion": "0.0.0",
-      "dateTimeStamp": "Sat, 04 Mar 2023 19:25:31 GMT"
+      "dateTimeStamp": "Sat, 04 Mar 2023 19:34:48 GMT"
     }
   ],
   "translation": {
@@ -47,7 +47,7 @@
     "excludedFiles": []
   },
   "mockpreview": {
-    "mockUri": "/northwind/v2/northwind/northwind.svc",
+    "mockUri": "/northwind/V2/(S(auurri4j41f0bsyhodeoxzsz))/OData/OData.svc",
     "metadataFilePath": "",
     "loadJSONFiles": false,
     "loadCustomRequests": false,

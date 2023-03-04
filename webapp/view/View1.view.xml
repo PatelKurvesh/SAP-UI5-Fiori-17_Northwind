@@ -4,30 +4,61 @@
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
-					<form:Simpleform>
-						<form:content>
-							<Label text="CustomerID"></Label>
-							<Input></Input>
-							
-							<Label text="Name"></Label>
-							<Input></Input>
-							
-						</form:content>
-					</form:Simpleform>
+						<form:SimpleForm>
+						<Label text="ID"></Label>
+						<Input id="ID" value=""></Input>
+						
+						<Label text="Name"></Label>
+						<Input id="Name" value=""></Input>
+						
+						<Label text="Rating"></Label>
+						<Input id="Rating" value=""></Input>
+						
+						<Label text="Price"></Label>
+						<Input id="Price" value=""></Input>
+						
+						<Label text="ReleaseDate"></Label>
+						<DatePicker id="RDate" value=""></DatePicker>
+						
+						<Button text="Create" press="onCreatePress"></Button>
+						<Button text="Update"></Button>
+						<Button text="Delete"></Button>
+					</form:SimpleForm>
 					
-					<Table items="{/Customers}">
+					<Table items="{/Products}">
 						<columns>
 							<Column>
-								<Text text="CustomerID"></Text>
+								<Text text="ID"></Text>
 							</Column>
 							<Column>
 								<Text text="Name"></Text>
+							</Column>
+							<Column>
+								<Text text="Rating"></Text>
+							</Column>
+							<Column>
+								<Text text="Price"></Text>
+							</Column>
+							<Column>
+								<Text text="ReleaseDate"></Text>
 							</Column>
 						</columns>
 						<items>
 							<ColumnListitem>
 								<cells>
-									<Text text="{CustomerID}"></Text>
+									<Text text="{ID}"></Text>
+								</cells>
+								<cells>
+									<Text text="{Name}"></Text>
+								</cells>
+								<cells>
+									<Text text="{Rating}"></Text>
+								</cells>
+								<cells>
+									<Text text="{Price}"></Text>
+								</cells>
+								<cells>
+									<Text text="{ReleaseDate}"></Text>
 								</cells>
 							</ColumnListitem>
 						</items>

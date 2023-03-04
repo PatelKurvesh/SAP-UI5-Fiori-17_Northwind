@@ -14,8 +14,8 @@
 			"version": "0.0.0"
 		},
 		"dataSources": {
-			"northwind.svc": {
-				"uri": "/northwind/v2/northwind/northwind.svc/",
+			"OData.svc": {
+				"uri": "/northwind/V2/(S(auurri4j41f0bsyhodeoxzsz))/OData/OData.svc/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
@@ -39,10 +39,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
 	"sap.ui5": {
 		"rootView": {
@@ -71,14 +68,22 @@
 				"settings": {
 					"bundleName": "GithubSAP-UI5-Fiori-17_Northwind.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneTime",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "OData.svc",
+				"preload": true
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		}
 	}
 }
