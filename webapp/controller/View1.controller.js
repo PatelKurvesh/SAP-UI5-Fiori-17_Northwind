@@ -11,8 +11,7 @@ sap.ui.define([
 				var rating = this.getView().byId("Rating");
 				var price = this.getView().byId("Price");
 				var rdate = this.getView().byId("RDate");
-
-				if (oEvent.getSource().getText() === "Create") {
+				var that = this;
 
 					var oItem = {
 						"ID": ID.getValue(),
@@ -21,17 +20,30 @@ sap.ui.define([
 						"Price": price.getValue(),
 						"ReleaseDate": rdate.getValue()
 					};
+					
+				if (oEvent.getSource().getText() === "Create") {
+
 
 					this.getView().getModel().create("/Products", oItem, {
-						success: function() {
+						success: function(oResponse) {
 							sap.m.MessageToast.show("Created Successfully");
+							that.getView().getModel().refresh();
 						},
-						error: function() {
+						error: function(error) {
 							sap.m.MessageToast.show("Error");
+							that.getView().getModel().refresh();
 						}
 					});
 				} else {
-					sap.m.MessageToast.show("Error");
+					this.getView().getModel().update("/Products("+ID.getValue()+")",oItem,{
+						success: function(oResponse) {
+							sap.m.MessageToast.show("Updated Successfully");
+							that.getView().getModel().refresh();
+						},
+						error: function(error) {
+							sap.m.MessageToast.show("Error");
+						}	
+					});
 				}
 			},
 
