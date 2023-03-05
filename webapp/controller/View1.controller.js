@@ -39,7 +39,7 @@ sap.ui.define([
 				this.byId("btnUpdate").setVisible(true);
 				this.byId("btnCreate").setVisible(false);
 				var sPath = oEvent.getParameter("listItem").getBindingContext().sPath;
-				this.byId("sform").bindElement(sPath)
+				this.byId("sform").bindElement(sPath);
 			}
 
 		
