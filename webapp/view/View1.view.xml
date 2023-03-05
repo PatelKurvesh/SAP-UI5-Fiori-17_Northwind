@@ -4,28 +4,28 @@
 		<pages>
 			<Page title="{i18n>title}">
 				<content>
-						<form:SimpleForm>
+						<form:SimpleForm id="sform">
 						<Label text="ID"></Label>
-						<Input id="ID" value=""></Input>
+						<Input id="ID" value="{ID}"></Input>
 						
 						<Label text="Name"></Label>
-						<Input id="Name" value=""></Input>
+						<Input id="Name" value="{Name}"></Input>
 						
 						<Label text="Rating"></Label>
-						<Input id="Rating" value=""></Input>
+						<Input id="Rating" value="{Rating}"></Input>
 						
 						<Label text="Price"></Label>
-						<Input id="Price" value=""></Input>
+						<Input id="Price" value="{Price}"></Input>
 						
 						<Label text="ReleaseDate"></Label>
-						<DatePicker id="RDate" value=""></DatePicker>
+						<DatePicker id="RDate" value="{ReleaseDate}"></DatePicker>
 						
-						<Button text="Create" press="onCreatePress"></Button>
-						<Button text="Update"></Button>
+						<Button text="Create" press="onSubmitPress" id="btnCreate"></Button>
+						<Button text="Update" press="onSubmitPress" visible="false" id="btnUpdate"></Button>
 						<Button text="Delete"></Button>
 					</form:SimpleForm>
 					
-					<Table items="{/Products}">
+					<Table items="{/Products}" itemPress="onListPress">
 						<columns>
 							<Column>
 								<Text text="ID"></Text>
@@ -44,7 +44,7 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListitem>
+							<ColumnListItem Press="onListPress" type="Navigation" >
 								<cells>
 									<Text text="{ID}"></Text>
 								</cells>
@@ -60,7 +60,7 @@
 								<cells>
 									<Text text="{ReleaseDate}"></Text>
 								</cells>
-							</ColumnListitem>
+							</ColumnListItem>
 						</items>
 					</Table>
 				</content>
