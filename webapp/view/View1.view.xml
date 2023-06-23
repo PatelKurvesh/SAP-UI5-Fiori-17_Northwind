@@ -44,7 +44,7 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem press="onListPress" type="Navigation" >
+							<ColumnListItem  type="Navigation" >
 								<cells>
 									<Text text="{ID}"></Text>
 								</cells>
